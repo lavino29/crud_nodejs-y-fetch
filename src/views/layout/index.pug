@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="css/normalize.css")
+        link(rel="stylesheet", href="css/styles.css")
+        
+    body
+      header.header
+       .Container
+        div.menu_header
+          ul.lista
+           li 
+            a.link(href="/home") INICIO
+           li 
+            a.link(href="/about") ABOUT
+           if salir
+            li
+             a.link(href="add") AGREGAR PELICULA
+        .login_header
+          ul.lista
+           if salir
+            li 
+             a.link(href="/logout") SALIR
+           else 
+            li 
+             a.link(href="/login") ENTRAR
+            li 
+             a.link(href="/registrar") REGISTRATE
+         
+            
+      block header
+   
+      .Containe_main
+       h1 Bienvenido 
+       block content
+      script(src="./js/js.js")  
+          
+      

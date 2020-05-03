@@ -1,0 +1,11 @@
+extends ./layout/index_home.pug
+block nota
+   h1 AGREGAR NUEVA PELICULA
+   div.Containe_main
+    form.formulario1(action="/ADD", method="post")
+         input.label(type="text", name="titulo", placeholder="ingresar titulo",required)
+         input.label(type="text", name="imagen" , placeholder="ingresar URL de la imagen",required)
+         input.label(type="text", name="link", placeholder="ingresar URL de la pelicula",required)
+         input.label(type="text", name="descripcion", placeholder="Descripcion",required)
+         div.btn_caja
+          input.btn(type="submit", value="AGREGAR")

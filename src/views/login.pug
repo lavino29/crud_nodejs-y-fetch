@@ -1,0 +1,10 @@
+extends ./layout/index.pug
+block content
+        h1= error
+        h3= err
+        form.form(action="/login", method="post")
+         input.label.email(type="email", name="email", placeholder="Ingresar email")
+         input.label(type="password", name="password" , placeholder="Ingresas contraseña")
+         div.btn_caja
+          input.btn(type="submit", value="Loguear")
+          

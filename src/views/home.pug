@@ -1,0 +1,34 @@
+extends ./layout/index_home.pug
+block nota
+ h1 PELICULAS AGREGADAS
+ .pop_up
+  .pop_caja
+   <i id="exit" class="far fa-times-circle"></i>
+   h3 Actualizar pelicula 
+   form.formulario1
+    input.label(type="text",name="titulo" ,id="titulo" placeholder="ingresar titulo",required)
+    input.label(type="text",name="imagen", id="imagen" placeholder="ingresar URL de la imagen",required)
+    input.label(type="text",name="link", id="link" placeholder="ingresar URL de la pelicula",required)
+    input.label(type="text",name="descripcion", id="descripcion" placeholder="ingresar descripcion",required)
+    button.btn.actualizar Actualizar 
+ .Container
+  
+  .contenedor_notas
+   if (notas)
+    each result in notas
+     div.caja(id=`${result._id}`)
+      .imagen
+       img(src=`${result.imagen}`)
+       
+      .titulo
+       p= result.titulo
+      .url
+       a(href=`"${result.link}"`) URL
+      .descripcion
+       p= result.descripcion
+      .edit
+       <i id="eliminar" class="far fa-trash-alt"></i><i id="editar" class="fas fa-edit"></i>
+      
+     
+      
+ 

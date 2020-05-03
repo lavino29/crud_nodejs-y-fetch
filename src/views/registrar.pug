@@ -1,0 +1,9 @@
+extends ./layout/index.pug
+block content
+        h1= error
+        form.form(action="/registrar", method="post")
+         input.email.label(type="email", name="email", placeholder="Ingresar email")
+         input.label(type="password", name="password" , placeholder="Ingresas contraseña")
+         input.label(type="text", name="nombre" , placeholder="Ingresas tu nombre")
+         div.btn_caja
+          input.btn(type="submit", value="Registar")

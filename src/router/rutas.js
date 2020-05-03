@@ -26,6 +26,9 @@ router.get('/about',(req,res)=>{
     res.render('about')
    }
 })
+router.get('/',()=>{
+    res.redirect('/home')
+})
 /* ------ CRUD ------ */
 router.post('/ADD',controladorNotas.creacionDeNotas,(req,res)=>{
     res.render('addNotas')
